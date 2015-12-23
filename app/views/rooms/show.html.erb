@@ -1,0 +1,12 @@
+<h1>Chat room</h1>
+
+<div id="messages">
+  <%- @messages.each do |message| %>
+    <%= render partial: 'messages/message', locals: {message: message} %>
+  <%- end %>
+</div>
+
+<form>
+  <label>Say something:</label><br>
+  <input type="text" data-behavior="room_speaker">
+</form>

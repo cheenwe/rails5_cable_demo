@@ -8,4 +8,6 @@
 #= require_tree ./channels
 #
 @App ||= {}
-App.cable = ActionCable.createConsumer()
+# App.cable = ActionCable.createConsumer()
+##websocket端口改为10086
+App.cable = ActionCable.createConsumer("ws://localhost:10086")
